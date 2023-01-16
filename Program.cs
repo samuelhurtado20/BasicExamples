@@ -24,3 +24,19 @@ void CharArray_Reverse()
     result = new String(cName);
     Console.WriteLine(result);
 }
+
+// 
+CountCharacterRepeated_ForEach();
+void CountCharacterRepeated_ForEach()
+{
+    string characters = "eufjnasdasdfjkkjlbgfkjdf09834jkgdsfn,mfdipt90fjdkg";
+    char character = 'j';
+    int count = 0;
+    foreach (char c in characters)
+    {
+        if(c == character)
+            count++;
+    }
+    Console.WriteLine($"Caracter: {character}, se repite: {count} veces.");
+
+}
