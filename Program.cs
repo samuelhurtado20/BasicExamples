@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Text.RegularExpressions;
+
 Console.WriteLine("Hello, World!");
 
 //
@@ -40,3 +42,14 @@ void CountCharacterRepeated_ForEach()
     Console.WriteLine($"Caracter: {character}, se repite: {count} veces.");
 
 }
+
+CountCharacterRepeated_Linq();
+void CountCharacterRepeated_Linq()
+{
+    string characters = "eufjnasdasdfjkkjlbgfkjdf09834jkgdsfn,mfdipt90fjdkg";
+    char character = 'j';
+    int count = characters.Where(c=> c == character).Count();
+    Console.WriteLine($"Caracter: {character}, se repite: {count} veces.");
+
+}
+
