@@ -69,3 +69,45 @@ void HammingDistance()
     }
     Console.WriteLine($"Hamming Distance is: {distance}, between: {wordOne} and {wordTwo}.");
 }
+
+WordCounter();
+void WordCounter()
+{
+    string text = "¡Ja, ja! Esta es la historia de las tres caravelas La Niña, la Pinta y la Santa MaríaAy, no, no, no, no, no Esas eran de don Cristóbal Colón No, yo voy a cantar el barco chiquito El barco de Cepillín";
+    int count = 0;
+
+    text = Regex.Replace(text, @"\s+", " ").Trim();
+    count = text.Split(" ").Length;
+
+
+    Console.WriteLine($"Numero de palabras en el texto es: {count}");
+}
+
+NumberCounter();
+void NumberCounter()
+{
+    string text = "En la edición 2022, el informe señala que el número de usuarios de internet en el mundo alcanzó los 4,950 millones de personas, lo que representa al 62,5% de la población mundial (7.910 millones de personas).";
+    int count = 0;
+    string pattern = @"[0-9]";
+    var regex = new Regex(pattern);
+    count = regex.Matches(text).Count();
+    Console.WriteLine($"Total de numeros en el texto es: {count}");
+}
+
+//
+Console.Write($"Ingresa un numero para comprobar si es Primo:");
+int number = int.Parse(Console.ReadLine() ?? "5");
+bool resp = IsPrimeNumber(number);
+Console.WriteLine(resp ? $"El numero {number} es primo." : $"El numero {number} no es primo.");
+bool IsPrimeNumber(int number)
+{
+    for (int i = 2; i < number; i++)
+    {
+        if (number % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+Tests_Junior tj = new Tests_Junior();
