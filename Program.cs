@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using BasicExamples;
+//using BasicExamples;
 using System.Text.RegularExpressions;
 
 Console.WriteLine("Hello, World!");
@@ -110,4 +110,4 @@ bool IsPrimeNumber(int number)
     return true;
 }
 
-Tests_Junior tj = new Tests_Junior();
+//Tests_Junior tj = new Tests_Junior();
